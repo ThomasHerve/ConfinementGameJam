@@ -13,12 +13,28 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        var v = value.Get<Vector2>();
-        Debug.Log(v);
+        if (IsLeft(value))
+            MouvementsManager.Move(MouvementsManager.dir.GAUCHE);
+        else if (IsRight(value))
+            MouvementsManager.Move(MouvementsManager.dir.DROITE);
+        else
+        {
+            var v = value.Get<Vector2>();
+            Debug.Log(v);
+        }
     }
 
     public void OnInteract(InputValue value)
     {
         Debug.Log("Interacted");
+    }
+
+    private bool IsLeft(InputValue value)
+    {
+        return value.Get<Vector2>().x == -1 && value.Get<Vector2>().y == 0;
+    }
+    private bool IsRight(InputValue value)
+    {
+        return value.Get<Vector2>().x == 1 && value.Get<Vector2>().y == 0;
     }
 }
