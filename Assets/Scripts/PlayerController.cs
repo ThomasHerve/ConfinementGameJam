@@ -19,6 +19,6 @@ public class PlayerController : MonoBehaviour
 
     public void OnInteract(InputValue value)
     {
-        Debug.Log("Interacted");
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<DialogueManager>().displayDialogue("Les pates");
     }
 }
