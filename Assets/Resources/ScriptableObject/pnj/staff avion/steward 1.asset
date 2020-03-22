@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f6ecf14efb49048872d9be17b3a504, type: 3}
+  m_Name: steward 1
+  m_EditorClassIdentifier: 
+  Charname: steward 1
+  corp: {fileID: 825637674600857651, guid: 5b193f4432cc9d0418952e739edd84eb, type: 3}
+  haut: {fileID: -8844114935211235324, guid: 5b193f4432cc9d0418952e739edd84eb, type: 3}
+  bas: {fileID: 0}
+  accessoire: {fileID: 0}
+  chaussure: {fileID: 0}
