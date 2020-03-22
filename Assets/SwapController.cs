@@ -7,9 +7,10 @@ public class SwapController : MonoBehaviour
    public Animator corp,chaussure,haut,bas,accessoire;
     public Animator actif;
     private Animator wait, wait2;
-    private bool désactivation,activation,f;
+    public bool désactivation,activation,f;
     private float t;
     public float waitanim;
+    public GameObject test;
 
     public void  Start()
     {
@@ -18,17 +19,18 @@ public class SwapController : MonoBehaviour
         désactivation = false;
         activation = false;
         wait2 = null;
-        waitanim = 0.1f;
         f = false;
     }
 
     public void Update()
     {
+        checkProblem();
         if (activation)
         {
             if (!f)
             {
                 actif = wait;
+                wait = null;
             actif.SetTrigger("pop");
                 t = Time.time;
                 f = true;
@@ -57,8 +59,12 @@ public class SwapController : MonoBehaviour
     }
     public void SwapAnim(string id)
     {
-        wait = ChooseWaiter(id);
-        désactivation = true;
+        if (!activation && !désactivation)
+        {
+            wait = ChooseWaiter(id);
+            désactivation = true;
+        }
+        
     }
     private Animator ChooseWaiter(string id)
     {
@@ -78,6 +84,10 @@ public class SwapController : MonoBehaviour
                 return null;
         }
     }
+    private void checkProblem() {
+
+    }
+
 
 
 
