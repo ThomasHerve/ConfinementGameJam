@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static MouvementsManager;
 
 public class MoveCamera : Mover
 {
@@ -9,6 +10,11 @@ public class MoveCamera : Mover
     {
         MouvementsManager.SetCamera(this.gameObject);
         speed = MouvementsManager.speedplayer;
+    }
+
+    public override void Move(dir d)
+    {
+        base.Move(d);
     }
 
 }

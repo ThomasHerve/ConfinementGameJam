@@ -13,7 +13,7 @@ public class Mover : MonoBehaviour
         
     }
 
-    public void Move(dir d)
+    public virtual void Move(dir d)
     {
         Vector3 mouvement = new Vector3(0, 0);
         if (d == GAUCHE)

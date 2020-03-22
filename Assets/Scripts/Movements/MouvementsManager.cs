@@ -23,7 +23,8 @@ public static class MouvementsManager
     public static float speedavionbg0 = 0.2f;
     public static float speedavionbg1 = 0.3f;
     public static float speedavionbg2 = 0.4f;
-
+    public static readonly int minCharacterOrder = 0;
+    public static readonly int maxCharacterOrder = 5;
 
     public static void Move(dir direction)
     {
@@ -32,11 +33,25 @@ public static class MouvementsManager
             player.GetComponent<Mover>().Move(direction);
             camera.GetComponent<Mover>().Move(direction);
             fond.GetComponent<Mover>().Move(direction);
-            foreach (var layer in avion)
-            {
+            foreach (var layer in avion){
                 layer.GetComponent<Mover>().Move(direction);
             }
         }
+        if (direction == HAUT || direction == BAS)
+        {
+            if ((direction == BAS && avion[1].GetComponent<SpriteRenderer>().sortingOrder == minCharacterOrder - 1) || (direction == HAUT && avion[1].GetComponent<SpriteRenderer>().sortingOrder == maxCharacterOrder + 1))
+                return;
+            if(direction == HAUT){
+                avion[1].GetComponent<SpriteRenderer>().sortingOrder = maxCharacterOrder + 1 ;
+                player.GetComponent<MovePlayer>().MoveUp();
+            }
+            else {
+                avion[1].GetComponent<SpriteRenderer>().sortingOrder = minCharacterOrder - 1;
+                player.GetComponent<MovePlayer>().MoveDown();
+            }
+
+        }
+
     }
 
 
