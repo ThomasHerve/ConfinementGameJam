@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f6ecf14efb49048872d9be17b3a504, type: 3}
+  m_Name: malade
+  m_EditorClassIdentifier: 
+  Charname: malade
+  corp: {fileID: 6046477657406863927, guid: 5b193f4432cc9d0418952e739edd84eb, type: 3}
+  haut: {fileID: -2785345323802855868, guid: 5b193f4432cc9d0418952e739edd84eb, type: 3}
+  bas: {fileID: -7372979966539949083, guid: cf5ad054bf925c34fa096e78c4a4b699, type: 3}
+  accessoire: {fileID: 0}
+  chaussure: {fileID: 1760288948186987488, guid: cf5ad054bf925c34fa096e78c4a4b699,
+    type: 3}
