@@ -12,9 +12,4 @@ public class MoveCamera : Mover
         speed = MouvementsManager.speedplayer;
     }
 
-    public override void Move(dir d)
-    {
-        base.Move(d);
-    }
-
 }

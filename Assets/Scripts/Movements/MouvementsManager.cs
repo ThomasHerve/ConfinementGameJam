@@ -17,20 +17,25 @@ public static class MouvementsManager
     private static GameObject fond;
     private static GameObject[] avion = new GameObject[3];
 
+    private static bool PlayerIsUp = true;
+
     [SerializeField]
     public static float speedplayer = 0.5f;
     public static float speedfond = 0.1f;
     public static float speedavionbg0 = 0.2f;
     public static float speedavionbg1 = 0.3f;
     public static float speedavionbg2 = 0.4f;
-    public static readonly int minCharacterOrder = 0;
-    public static readonly int maxCharacterOrder = 5;
+    public static readonly int  minmove = -2;
+    public static readonly int maxmove = 3;
 
     public static void Move(dir direction)
     {
         if (direction == GAUCHE || direction == DROITE)
         {
             player.GetComponent<Mover>().Move(direction);
+            if (MaxMove(direction))
+                return;
+
             camera.GetComponent<Mover>().Move(direction);
             fond.GetComponent<Mover>().Move(direction);
             foreach (var layer in avion){
@@ -39,14 +44,21 @@ public static class MouvementsManager
         }
         if (direction == HAUT || direction == BAS)
         {
-            if ((direction == BAS && avion[1].GetComponent<SpriteRenderer>().sortingOrder == minCharacterOrder - 1) || (direction == HAUT && avion[1].GetComponent<SpriteRenderer>().sortingOrder == maxCharacterOrder + 1))
+            if ((direction == BAS && !PlayerIsUp) || (direction == HAUT && PlayerIsUp))
                 return;
-            if(direction == HAUT){
-                avion[1].GetComponent<SpriteRenderer>().sortingOrder = maxCharacterOrder + 1 ;
+            PlayerIsUp = !PlayerIsUp;
+            if (direction == HAUT){
+                SortingLayer character = SortingLayer.layers[3];
+                SortingLayer.layers[3] = SortingLayer.layers[2];
+                SortingLayer.layers[2] = character;
+
                 player.GetComponent<MovePlayer>().MoveUp();
             }
             else {
-                avion[1].GetComponent<SpriteRenderer>().sortingOrder = minCharacterOrder - 1;
+                SortingLayer character = SortingLayer.layers[2];
+                SortingLayer.layers[2] = SortingLayer.layers[3];
+                SortingLayer.layers[3] = character;
+                
                 player.GetComponent<MovePlayer>().MoveDown();
             }
 
@@ -54,6 +66,14 @@ public static class MouvementsManager
 
     }
 
+    private static bool MaxMove(dir d)
+    {
+        if (d == dir.GAUCHE && MouvementsManager.GetPlayer().transform.position.x <= minmove)
+            return true;
+        if (d == dir.DROITE && MouvementsManager.GetPlayer().transform.position.x >= maxmove)
+            return true;
+        return false;
+    }
 
 
     public static void SetPlayer(GameObject _player)
@@ -73,4 +93,8 @@ public static class MouvementsManager
         avion[layer] = _avion;
     }
 
+    public static GameObject GetPlayer()
+    {
+        return player;
+    }
 }
