@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52f6ecf14efb49048872d9be17b3a504, type: 3}
-  m_Name: Character
+  m_Name: random 5
   m_EditorClassIdentifier: 
-  Charname: JEANAA
+  Charname: random 5
   corp: {fileID: 657194322272297727, guid: 5b193f4432cc9d0418952e739edd84eb, type: 3}
-  haut: {fileID: 43541947743674934, guid: 5b193f4432cc9d0418952e739edd84eb, type: 3}
-  bas: {fileID: 8566293976400746802, guid: 5b193f4432cc9d0418952e739edd84eb, type: 3}
-  accessoire: {fileID: 1675758235504372850, guid: 5b193f4432cc9d0418952e739edd84eb,
-    type: 3}
-  chaussure: {fileID: 1760288948186987488, guid: cf5ad054bf925c34fa096e78c4a4b699,
-    type: 3}
+  haut: {fileID: 0}
+  bas: {fileID: 0}
+  accessoire: {fileID: 0}
+  chaussure: {fileID: 0}
