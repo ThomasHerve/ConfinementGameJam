@@ -40,18 +40,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Fond
-    uniqueID: 1667237481
-    locked: 0
-  - name: AvionLastBG
-    uniqueID: 575387979
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: AvionMiddleBG
-    uniqueID: 1754627789
-    locked: 0
-  - name: AvionFirstBG
-    uniqueID: 1439578315
     locked: 0
