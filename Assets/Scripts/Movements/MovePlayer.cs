@@ -15,13 +15,13 @@ public class MovePlayer : Mover
 
     public void MoveUp()
     {
-        transform.position += new Vector3(0,1);
-        transform.localScale /= 1.2f;
+        transform.position += new Vector3(0,1.8f);
+        transform.localScale /= 1.4f;
     }
 
     public void MoveDown()
     {
-        transform.position += new Vector3(0, -1);
-        transform.localScale *= 1.2f;
+        transform.position += new Vector3(0, -1.8f);
+        transform.localScale *= 1.4f;
     }
 }

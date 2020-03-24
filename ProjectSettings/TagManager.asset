@@ -52,6 +52,9 @@ TagManager:
   - name: AvionMiddleBG
     uniqueID: 1754627789
     locked: 0
+  - name: Default2
+    uniqueID: 895780271
+    locked: 0
   - name: AvionFirstBG
     uniqueID: 1439578315
     locked: 0

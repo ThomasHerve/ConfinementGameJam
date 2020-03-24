@@ -48,17 +48,20 @@ public static class MouvementsManager
                 return;
             PlayerIsUp = !PlayerIsUp;
             if (direction == HAUT){
-                SortingLayer character = SortingLayer.layers[3];
-                SortingLayer.layers[3] = SortingLayer.layers[2];
-                SortingLayer.layers[2] = character;
+                foreach (SpriteRenderer sr in player.GetComponentsInChildren<SpriteRenderer>())
+                {
+                    sr.sortingLayerName = "Default";
+                }
+                
 
                 player.GetComponent<MovePlayer>().MoveUp();
             }
             else {
-                SortingLayer character = SortingLayer.layers[2];
-                SortingLayer.layers[2] = SortingLayer.layers[3];
-                SortingLayer.layers[3] = character;
-                
+                foreach (SpriteRenderer sr in player.GetComponentsInChildren<SpriteRenderer>())
+                {
+                    sr.sortingLayerName = "Default2";
+                }
+
                 player.GetComponent<MovePlayer>().MoveDown();
             }
 
