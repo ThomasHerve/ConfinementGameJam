@@ -330,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 8650794517677984072, guid: abe80ade98721274bafcdb2f7ff2b03d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8650794517677984072, guid: abe80ade98721274bafcdb2f7ff2b03d,
         type: 3}
@@ -352,7 +352,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Edouard
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7986501679779736308, guid: abe80ade98721274bafcdb2f7ff2b03d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: abe80ade98721274bafcdb2f7ff2b03d, type: 3}
 --- !u!1 &1493694123
 GameObject:
@@ -654,7 +655,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jhon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7986501679779736308, guid: 98378e4b5942bb144a143782ba981d0d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 98378e4b5942bb144a143782ba981d0d, type: 3}
 --- !u!1001 &8590165752455063842
 PrefabInstance:
@@ -701,7 +703,7 @@ PrefabInstance:
     - target: {fileID: 7056697566135804816, guid: f69899deec55f234cb9bf5a31b152646,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7056697566135804816, guid: f69899deec55f234cb9bf5a31b152646,
         type: 3}
@@ -733,5 +735,6 @@ PrefabInstance:
       propertyPath: offset.y
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8590165752606491875, guid: f69899deec55f234cb9bf5a31b152646, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f69899deec55f234cb9bf5a31b152646, type: 3}
